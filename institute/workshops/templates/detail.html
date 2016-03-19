@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+
+{%block pagetitle %} {{ topic.name }} {% endblock %}
+
+{%block body %} 
+<h1> {{ topic.name }} </h1>
+
+{% for session in sessions %}    
+    <h2>  {{ session.name }} | {{ session.date }} </h2>
+    <br>
+    <h2> Students</h5>
+    
+    {% for student in students %}
+     <p> {{ student.name }} {{ student.lastname }}  | {{ student.email}}</p>
+     
+     <br>
+     {%endfor%}
+{%endfor%}
+
+
+{% endblock%}

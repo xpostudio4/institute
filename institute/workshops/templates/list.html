@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{%block pagetitle %} Talleres {% endblock %}
+
+{% block body %} 
+
+{% for topic in topics %}    
+
+<h1> <a href="/workshops/{{topic.id}}"> {{topic.name }} {{ topic.date }} </a></h1>
+{%endfor%}
+
+
+{% endblock %}
